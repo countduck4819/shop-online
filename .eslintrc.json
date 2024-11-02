@@ -1,3 +1,49 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+    "extends": [
+        "next/core-web-vitals",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "eslint-config-prettier",
+        "prettier"
+    ],
+    "plugins": ["prettier", "unused-imports"],
+    "ignorePatterns": ["next.config.mjs", "i18n.config.ts"],
+    "rules": {
+        "prettier/prettier": [
+            "warn",
+            {
+                "singleQuote": true
+            }
+        ],
+        "no-unused-vars": "off",
+        "no-undef": "off",
+        "no-useless-escape": "off",
+        "no-empty": "warn",
+        "no-unreachable": "off",
+        "no-case-declarations": "off",
+        "unused-imports/no-unused-imports": 2,
+        "unused-imports/no-unused-vars": [
+            "warn",
+            {
+                "vars": "all",
+                "varsIgnorePattern": "^_",
+                "args": "after-used",
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        "react-hooks/rules-of-hooks": "warn",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-duplicate-enum-values": "off",
+        "@typescript-eslint/ban-types": "warn",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-non-null-asserted-optional-chain": "warn",
+        "no-extra-boolean-cast": "off",
+        "react-hooks/exhaustive-deps": "off",
+        "react/destructuring-assignment": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "react/require-default-props": "off",
+        "react/jsx-props-no-spreading": "off",
+        "@next/next/no-img-element": "off",
+        "@typescript-eslint/no-explicit-any": ["off"]
+    }
 }
